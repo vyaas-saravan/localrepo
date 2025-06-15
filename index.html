@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random HTML Example</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f0f0; margin: 40px; }
+        .container { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px #ccc; }
+        h1 { color: #2c3e50; }
+        ul { list-style: square; }
+        .random-box { background: #e1f5fe; padding: 10px; border-radius: 4px; margin-top: 20px; }
+        button { padding: 8px 16px; border: none; background: #3498db; color: #fff; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #2980b9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Random HTML</h1>
+        <p>This is a simple HTML page with some random elements:</p>
+        <ul>
+            <li>Random fact generator</li>
+            <li>Styled container</li>
+            <li>Responsive button</li>
+        </ul>
+        <button onclick="showRandomFact()">Show Random Fact</button>
+        <div class="random-box" id="factBox">Click the button to see a random fact!</div>
+    </div>
+    <script>
+        const facts = [
+            "Honey never spoils.",
+            "Bananas are berries, but strawberries aren't.",
+            "A group of flamingos is called a 'flamboyance'.",
+            "Octopuses have three hearts.",
+            "The Eiffel Tower can be 15 cm taller during hot days."
+        ];
+        function showRandomFact() {
+            const fact = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById('factBox').textContent = fact;
+        }
+    </script>
+</body>
+</html>
